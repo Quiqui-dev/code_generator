@@ -1,0 +1,36 @@
+<table name="user" db="XT">
+
+    <column name="userRef">
+        <key>PK</key>
+        <dtype>INT</dtype>
+        <null>n</null>
+        <example>0</example>
+        <default>0</default>
+    </column>
+
+    <column name="username">
+        <key>n</key>
+        <dtype>VARCHAR(60)</dtype>
+        <null>n</null>
+        <example>'testUser'</example>
+        <default>'testUser'</default>
+    </column>
+
+    <column name="password">
+        <key>n</key>
+        <dtype>VARCHAR(30)</dtype>
+        <null>n</null>
+        <example>'testpswd'</example>
+        <default>'testpswd'</default>
+    </column>
+
+    <column name="dateCreated">
+        <key>n</key>
+        <dtype>DATETIME</dtype>
+        <null>n</null>
+        <example>'2023-01-01'</example>
+        <default>'2023-01-01'</default>
+    </column>
+
+    
+</table>
