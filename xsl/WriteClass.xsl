@@ -112,6 +112,8 @@ class <xsl:value-of select="@name"/>Write(<xsl:value-of select="@name"/>Read.<xs
                 sQuery,
                 (<xsl:for-each select="column">dInsert["<xsl:value-of select="@name"/>"]<xsl:if test="position() != last()">,</xsl:if></xsl:for-each>)
             )
+
+            self.updateNextPK(iNextPK=nextPK)
         except Error:
             raise
 </xsl:template>
@@ -148,6 +150,8 @@ class <xsl:value-of select="@name"/>Write(<xsl:value-of select="@name"/>Read.<xs
                 sQuery,
                 lPrepInsert
             )
+
+            self.updateNextPK(iNextPK=self.nextPK)
         except Error:
             raise
 
