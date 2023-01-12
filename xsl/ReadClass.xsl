@@ -20,7 +20,7 @@ class <xsl:value-of select="@name"/>Read:
         self.nextPK = 0
 
 
-    def getRows(self):
+    def get<xsl:value-of select="@name"/>Rows(self):
         return self.__d<xsl:value-of select="@name"/>Rows
 
     def setRowCount(self, numRows):

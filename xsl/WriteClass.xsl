@@ -101,7 +101,7 @@ class <xsl:value-of select="@name"/>Write(<xsl:value-of select="@name"/>Read.<xs
 
         defaultRow.update(dInsert)
         dInsert = defaultRow
-        dInsert["dateCreated"] = datetime.now()
+        dInsert["dateCreated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         try:
 
@@ -138,7 +138,7 @@ class <xsl:value-of select="@name"/>Write(<xsl:value-of select="@name"/>Read.<xs
 
             dTmp = self.formatEscapeChars(dItem=dTmp)
 
-            dTmp["dateCreated"] = datetime.now()
+            dTmp["dateCreated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
             dTmp["<xsl:for-each select="column"><xsl:if test="key='PK'"><xsl:value-of select="@name"/></xsl:if></xsl:for-each>"] = self.nextPK + 10
             self.nextPK += 10
